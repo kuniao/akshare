@@ -1,17 +1,21 @@
-# [AkShare](https://github.com/jindaxiang/akshare) 安装指导
+# [AKShare](https://github.com/jindaxiang/akshare) 安装指导
 
 ## 重要提示
 
-1. 首先请确认安装 [Python](https://www.python.org/) 3.7(64 位) 及以上版本, 这里推荐 [Python](https://www.python.org/) 3.8.5(64 位) 版本;
-2. [AkShare](https://github.com/jindaxiang/akshare) 推荐安装最新版本的 [Anaconda](https://www.anaconda.com/), 可以解决大部分安装问题.
+1. 目前 [AKShare](https://github.com/jindaxiang/akshare) 仅支持 64 位版本的操作系统安装和使用;
+2. 目前 [AKShare](https://github.com/jindaxiang/akshare) 仅支持 [Python](https://www.python.org/) 3.7(64 位) 及以上版本, 这里推荐 [Python](https://www.python.org/) 3.8.5(64 位) 版本;
+3. [AKShare](https://github.com/jindaxiang/akshare) 推荐安装最新版本的 [Anaconda (64 位)](https://www.anaconda.com/), 可以解决大部分环境配置问题;
+4. 对于熟悉容器技术的小伙伴, 可以安装 Docker 使用, 指导教程如下: [AKShare Docker 部署](https://www.akshare.xyz/zh_CN/latest/akdocker/akdocker.html).
 
-## 安装 [AkShare](https://github.com/jindaxiang/akshare)
+## 安装 [AKShare](https://github.com/jindaxiang/akshare)
 
 ### 通用安装
 
 ```
 pip install akshare  --upgrade
 ```
+
+注意：程序运行时，文件名、文件夹名不能是：akshare
 
 ### 国内安装-Python
 
@@ -27,7 +31,7 @@ pip install akshare -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host=mir
 
 ## 安装 [Node.js](https://nodejs.org/dist/)
 
-P.S. 体验 [AkShare](https://github.com/jindaxiang/akshare) 完整功能, 请安装 [Node.js](https://nodejs.org/dist/)
+P.S. 体验 [AKShare](https://github.com/jindaxiang/akshare) 完整功能, 请安装 [Node.js](https://nodejs.org/dist/)
 
 ### 快速安装
 
@@ -121,9 +125,9 @@ node 可用
 
 代表 Node.js 已经成功安装，并且正常运行。
 
-## 升级 [AkShare](https://github.com/jindaxiang/akshare)
+## 升级 [AKShare](https://github.com/jindaxiang/akshare)
 
-P.S. **由于目前版本更新迭代频繁, 请在使用 [AkShare](https://github.com/jindaxiang/akshare) 前先升级, 命令如下所示**
+P.S. **由于目前版本更新迭代频繁, 请在使用 [AKShare](https://github.com/jindaxiang/akshare) 前先升级, 命令如下所示**
 
 ```
 pip install akshare --upgrade
@@ -135,7 +139,7 @@ pip install akshare --upgrade
 
 [下载 Windows 64 位 Python 3.8 的 Anaconda](https://repo.anaconda.com/archive/Anaconda3-2020.07-Windows-x86_64.exe)
 
-[安装教程参见 AkShare 文档的环境配置专栏](https://www.akshare.xyz/zh_CN/latest/anaconda.html)
+[安装教程参见 AKShare 文档的环境配置专栏](https://www.akshare.xyz/zh_CN/latest/anaconda.html)
 
 ### 安装 R 语言
 
@@ -143,7 +147,7 @@ pip install akshare --upgrade
 
 [下载 RStudio](https://download1.rstudio.org/desktop/windows/RStudio-1.3.959.exe)
 
-先安装 R，再安装 RStudio，按一下步安装即可。
+先安装 R，再安装 RStudio，选择默认步骤安装即可。
 
 ### 在 R 语言中安装相应的包
 
@@ -162,13 +166,14 @@ use_python("/usr/local/bin/python")
 
 调用本地的 Python 程序，其中 usr 需要替换为本地电脑的用户名。
 
-最后展示一段演示代码，此代码在 R 语言中通过 reticulate 包来调用 AkShare 获取数据：
+最后展示一段演示代码，此代码在 R 语言中通过 reticulate 包来调用 [AKShare](https://github.com/jindaxiang/akshare) 获取数据：
 
 ```
 library(reticulate)  # 导入 reticulate 包
 use_python("/king/local/bin/python")  # 其中的 king 为本地电脑用户名
+# use_condaenv(condaenv="ak_test", required = TRUE)  # 也可以使用 conda 创建的虚拟环境，其中的 ak_test 为虚拟环境名称
 ak <- import("akshare")  # 类似于 import akshare as ak
-stock_df <- ak$stock_em_yysj(date="2020-03-31")  # 类似于 ak.stock_em_yysj(date="2020-03-31")
+stock_df <- ak$stock_em_yysj(date="20200331")  # 类似于 ak.stock_em_yysj(date="20200331")
 print(stock_df)  # 查看数据
 ```
 
@@ -270,4 +275,4 @@ pip install akshare --user
 ### 4. 提示其他的错误
 
 - 方法一: 确认并升级您的 Anaconda 或者 Python 到 64 位的 **Python3.7** 及以上版本
-- 方法二: 使用 conda 的虚拟环境来安装, 详见 **AkShare 环境配置** 板块的内容
+- 方法二: 使用 conda 的虚拟环境来安装, 详见 **[AKShare](https://github.com/jindaxiang/akshare) 环境配置** 板块的内容

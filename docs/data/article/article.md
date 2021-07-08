@@ -1,4 +1,4 @@
-## [AkShare](https://github.com/jindaxiang/akshare) 波动率数据
+## [AKShare](https://github.com/jindaxiang/akshare) 波动率数据
 
 ### 已实现波动率数据
 
@@ -163,7 +163,7 @@ print(df)
 2019-11-08    0.199549
 ```
 
-## [AkShare](https://github.com/jindaxiang/akshare) 多因子数据
+## [AKShare](https://github.com/jindaxiang/akshare) 多因子数据
 
 ### Current Research Returns
 
@@ -270,7 +270,7 @@ Big Neutral                                            4.49
 Big Aggressive                                        -0.38
 ```
 
-## [AkShare](https://github.com/jindaxiang/akshare) 政策不确定性数据
+## [AKShare](https://github.com/jindaxiang/akshare) 政策不确定性数据
 
 ### 国家和地区指数
 
@@ -349,7 +349,7 @@ print(epu_index_df)
 291  2019      4           502.55000
 ```
 
-## [AkShare](https://github.com/jindaxiang/akshare) 学术专栏
+## [AKShare](https://github.com/jindaxiang/akshare) 学术专栏
 
 ### Amit Goyal
 
@@ -398,7 +398,7 @@ equity premium prediction 中的标普 500 和常用经济指标
 ```python
 import akshare as ak
 agoyal_stock_return_df = ak.agoyal_stock_return(indicator="monthly")
-print(agoyal_stock_return_df.columns)
+print(agoyal_stock_return_df)
 ```
 
 数据示例

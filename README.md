@@ -1,11 +1,11 @@
-![](https://github.com/jindaxiang/akshare/blob/master/example/images/AkShare_logo.jpg)
+![](https://github.com/jindaxiang/akshare/blob/master/example/images/AKShare_logo.jpg)
 
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/akshare.svg)](https://pypi.org/project/akshare/) 
-[![PyPI](https://img.shields.io/pypi/v/akshare.svg)](https://pypi.org/project/akshare/) 
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/akshare.svg)](https://pypi.org/project/akshare/)
+[![PyPI](https://img.shields.io/pypi/v/akshare.svg)](https://pypi.org/project/akshare/)
 [![Downloads](https://pepy.tech/badge/akshare)](https://pepy.tech/project/akshare)
 [![Documentation Status](https://readthedocs.org/projects/akshare/badge/?version=latest)](https://akshare.readthedocs.io/zh_CN/latest/?badge=latest)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-[![akshare](https://img.shields.io/badge/Data%20Science-AkShare-green)](https://github.com/jindaxiang/akshare)
+[![akshare](https://img.shields.io/badge/Data%20Science-AKShare-green)](https://github.com/jindaxiang/akshare)
 [![Actions Status](https://github.com/jindaxiang/akshare/workflows/build/badge.svg)](https://github.com/jindaxiang/akshare/actions)
 [![MIT Licence](https://camo.githubusercontent.com/14a9abb7e83098f2949f26d2190e04fb1bd52c06/68747470733a2f2f626c61636b2e72656164746865646f63732e696f2f656e2f737461626c652f5f7374617469632f6c6963656e73652e737667)](https://github.com/jindaxiang/akshare/blob/master/LICENSE)
 [![](https://img.shields.io/github/forks/jindaxiang/akshare)](https://github.com/jindaxiang/akshare)
@@ -15,14 +15,13 @@
 
 ## Overview
 
-[AkShare](https://github.com/jindaxiang/akshare) requires Python(64 bit) 3.7 or greater, aims to make fetch financial data as convenient as possible.
+[AKShare](https://github.com/jindaxiang/akshare) requires Python(64 bit) 3.7 or greater, aims to make fetch financial data as convenient as possible.
 
 **Write less, get more!**
 
 - Documentation: [中文文档](https://akshare.readthedocs.io/zh_CN/latest/)
-- Documentation: [中文文档-国内加速访问](https://akshare-4gize6tod19f2d2e-1252952517.tcloudbaseapp.com/index.html)
 
-# ![](https://github.com/jindaxiang/akshare/blob/master/example/images/AkShare.svg)
+# ![](https://github.com/jindaxiang/akshare/blob/master/example/images/AKShare.svg)
 
 ## Installation
 
@@ -40,7 +39,7 @@ pip install akshare -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host=mir
 
 ### PR
 
-Please check [documentation](https://www.akshare.xyz/zh_CN/latest/contributor.html) if you want to contribute to AkShare
+Please check out [documentation](https://www.akshare.xyz/zh_CN/latest/contributor.html) if you want to contribute to AKShare
 
 ### Docker
 
@@ -71,27 +70,27 @@ Code
 
 ```python
 import akshare as ak
-hist_df = ak.stock_us_daily(symbol="AMZN")  # Get U.S. stock Amazon's price info
-print(hist_df)
+stock_us_daily_df = ak.stock_us_daily(symbol="AMZN")  # Get U.S. stock Amazon's price info
+print(stock_us_daily_df)
 ```
 
 Output
 
 ```
-                 open       high      low      close     volume        amount
-date                                                                         
-1997-05-15    29.2500    30.0000    23.13    23.5000  6013000.0  0.000000e+00
-1997-05-16    23.6300    23.7500    20.50    20.7500  1225000.0  0.000000e+00
-1997-05-19    21.1300    21.2500    19.50    20.5000   508900.0  0.000000e+00
-1997-05-20    20.7500    21.0000    19.63    19.6300   455600.0  0.000000e+00
-1997-05-21    19.6300    19.7500    16.50    17.1300  1571100.0  0.000000e+00
-               ...        ...      ...        ...        ...           ...
-2020-10-14  3447.0000  3464.8799  3340.00  3363.7100  5828916.0  5.752750e+10
-2020-10-15  3292.0100  3355.8799  3280.00  3338.6499  5223448.0  5.752750e+10
-2020-10-16  3363.2300  3399.6599  3160.00  3272.7100  6474353.0  5.752750e+10
-2020-10-19  3299.6101  3329.0000  3192.74  3207.2100  5223626.0  5.752750e+10
-2020-10-20  3222.2800  3266.0000  3192.01  3217.0100  4509678.0  5.752750e+10
-[5896 rows x 6 columns]
+               open       high        low      close     volume
+date                                                           
+1997-05-15    29.25    30.0000    23.1300    23.5000  6013000.0
+1997-05-16    23.63    23.7500    20.5000    20.7500  1225000.0
+1997-05-19    21.13    21.2500    19.5000    20.5000   508900.0
+1997-05-20    20.75    21.0000    19.6300    19.6300   455600.0
+1997-05-21    19.63    19.7500    16.5000    17.1300  1571100.0
+             ...        ...        ...        ...        ...
+2021-01-04  3270.00  3272.0000  3144.0200  3186.6299  4205801.0
+2021-01-05  3166.01  3223.3799  3165.0601  3218.5100  2467255.0
+2021-01-06  3146.48  3197.5090  3131.1599  3138.3799  4065357.0
+2021-01-07  3157.00  3208.5420  3155.0000  3162.1599  3320882.0
+2021-01-08  3180.00  3190.6399  3142.2000  3182.7000  3410288.0
+[5951 rows x 5 columns]
 ```
 
 ### Plot
@@ -100,7 +99,7 @@ Code
 
 ```python
 import akshare as ak
-import mplfinance as mpf  # Please install mplfinance
+import mplfinance as mpf  # Please install mplfinance as follows: pip install mplfinance
 
 stock_us_daily_df = ak.stock_us_daily(symbol="AAPL", adjust="qfq")
 stock_us_daily_df = stock_us_daily_df[["open", "high", "low", "close", "volume"]]
@@ -116,16 +115,21 @@ Output
 
 ## Communication
 
-Pay attention to **数据科学实战** WeChat Official Accounts to get the [AkShare](https://github.com/jindaxiang/akshare) updated info:
+Pay attention to **数据科学家** Official Accounts to get more information about Quant, ML, DS and so on.
+
+<div align=center>
+    <img src="https://jfds-1252952517.cos.ap-chengdu.myqcloud.com/akshare/readme/qrcode/data_scientist">
+</div>
+
+Pay attention to **数据科学实战** WeChat Official Accounts to get the [AKShare](https://github.com/jindaxiang/akshare) updated info:
 
 <div align=center>
     <img src="https://github.com/jindaxiang/akshare/blob/master/example/images/ds.png">
 </div>
 
-Application to add **AkShare-官方** QQ group and talk about [AkShare](https://github.com/jindaxiang/akshare) issues, QQ group number: 606449742
-
+Application to add **AKShare-官方** QQ group and talk about [AKShare](https://github.com/jindaxiang/akshare) issues, QQ group number: 922305679
 <div align=center>
-    <a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=h_V24FH2ayImz830d4Y2axyKfvj9TNU9&jump_from=webapi"><img border="0" src="https://jfds-1252952517.cos.ap-chengdu.myqcloud.com/akshare/readme/qrcode/qr_code_606449742.png" alt="AkShare-官方" title="AkShare-官方"></a>
+    <a target="_blank" href="https://qm.qq.com/cgi-bin/qm/qr?k=WQIFmUrIUy1LU444r1NToHMlmzWwirSQ&jump_from=webapi"><img border="0" src="https://jfds-1252952517.cos.ap-chengdu.myqcloud.com/akshare/readme/qrcode/qr_code_922305679.png" alt="AKShare-官方" title="AKShare-官方"></a>
 </div>
 
 ## Features
@@ -144,7 +148,7 @@ Application to add **AkShare-官方** QQ group and talk about [AkShare](https://
 
 ## Contribution
 
-[AkShare](https://github.com/jindaxiang/akshare) is still under developing, feel free to open issues and pull requests:
+[AKShare](https://github.com/jindaxiang/akshare) is still under developing, feel free to open issues and pull requests:
 
 - Report or fix bugs
 - Require or publish interface
@@ -155,36 +159,31 @@ Application to add **AkShare-官方** QQ group and talk about [AkShare](https://
 
 ## Statement
 
-1. All data provided by [AkShare](https://github.com/jindaxiang/akshare) is just for academic research purpose;
-
-2. The data provided by [AkShare](https://github.com/jindaxiang/akshare) is for reference only and does not constitute any investment proposal;
-
-3. Any investor based on [AkShare](https://github.com/jindaxiang/akshare) research should pay more attention to data risk;
-
-4. [AkShare](https://github.com/jindaxiang/akshare) will insist on providing open-source financial data;
-
-5. Based on some uncontrollable factors, some data interfaces in [AkShare](https://github.com/jindaxiang/akshare) may be removed;
-
-6. Please follow the relevant open-source protocol used by [AkShare](https://github.com/jindaxiang/akshare)
+1. All data provided by [AKShare](https://github.com/jindaxiang/akshare) is just for academic research purpose;
+2. The data provided by [AKShare](https://github.com/jindaxiang/akshare) is for reference only and does not constitute any investment proposal;
+3. Any investor based on [AKShare](https://github.com/jindaxiang/akshare) research should pay more attention to data risk;
+4. [AKShare](https://github.com/jindaxiang/akshare) will insist on providing open-source financial data;
+5. Based on some uncontrollable factors, some data interfaces in [AKShare](https://github.com/jindaxiang/akshare) may be removed;
+6. Please follow the relevant open-source protocol used by [AKShare](https://github.com/jindaxiang/akshare).
 
 ## Show your style
 
 Use the badge in your project's README.md:
 
 ```markdown
-[![Data: akshare](https://img.shields.io/badge/Data%20Science-AkShare-green)](https://github.com/jindaxiang/akshare)
+[![Data: akshare](https://img.shields.io/badge/Data%20Science-AKShare-green)](https://github.com/jindaxiang/akshare)
 ```
 
 Using the badge in README.rst:
 
 ```
-.. image:: https://img.shields.io/badge/Data%20Science-AkShare-green
+.. image:: https://img.shields.io/badge/Data%20Science-AKShare-green
     :target: https://github.com/jindaxiang/akshare
 ```
 
 Looks like this:
 
-[![Data: akshare](https://img.shields.io/badge/Data%20Science-AkShare-green)](https://github.com/jindaxiang/akshare)
+[![Data: akshare](https://img.shields.io/badge/Data%20Science-AKShare-green)](https://github.com/jindaxiang/akshare)
 
 ## Citation
 
@@ -193,10 +192,10 @@ Please use this **bibtex** if you want to cite this repository in your publicati
 ```
 @misc{akshare,
     author = {Albert King},
-    title = {AkShare},
+    title = {AKShare},
     year = {2019},
     publisher = {GitHub},
-    journal = {GitHub repository},
+    journal = {GitHub Repository},
     howpublished = {\url{https://github.com/jindaxiang/akshare}},
 }
 ```
